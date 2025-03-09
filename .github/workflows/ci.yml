@@ -28,6 +28,8 @@ jobs:
 
       - name: list files
         run: ls -ltr $pwd
+      - name: cat README.md
+        run: cat README.md
 
       # - name: Print testesteststestestes
       #   run: ls -la /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
