@@ -90,5 +90,5 @@ jobs:
       #     ls -la ~/.config/configstore
 
       - name: Run script 1
-        run: inso run test wrk_bd9716d353474b419167322690b72561 --env env_088d03b20fd1b1b242cd8972065cee44198dc93e --workingDir /home/runner/work/inso-cli-pipeline/ --verbose --printOptions --ci
+        run: inso run test wrk_bd9716d353474b419167322690b72561 --env env_088d03b20fd1b1b242cd8972065cee44198dc93e --workingDir /home/runner/work/inso-cli-pipeline --verbose --printOptions --ci
         # run: inso run test wrk_bd9716d353474b419167322690b72561 --env env_088d03b20fd1b1b242cd8972065cee44198dc93e --workingDir $pwd --verbose --printOptions --ci
