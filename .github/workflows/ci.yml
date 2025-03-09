@@ -89,6 +89,5 @@ jobs:
       #   run: |
       #     ls -la ~/.config/configstore
 
-      # - name: Run script 1
-      #   run: inso run test wrk_e1e1ad06132e4625bddace0569de4612 --env env_2b2ddd0cd9598ca8550efea5f2b0771fa6ea0c29 --workingDir /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data --verbose --printOptions --ci
-      
+      - name: Run script 1
+        run: inso run test wrk_bd9716d353474b419167322690b72561 --env env_088d03b20fd1b1b242cd8972065cee44198dc93e --workingDir $pwd --verbose --printOptions --ci
