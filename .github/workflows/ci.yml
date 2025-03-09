@@ -1,0 +1,89 @@
+name: inso-cli-pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Print working directory
+        run: pwd
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '20.x'
+      - name: Setup inso
+        uses: Kong/setup-inso@cf1bf7b12e5d0092399c79025c09eba54d8182f7
+        with:
+          inso-version: 10.1.1
+          compression: gzip
+      - name: Print inso version
+        run: inso --version
+
+
+
+      - name: Print testesteststestestes
+        run: ls -la /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
+
+      - name: Print inso help
+        run: inso --help
+
+      - name: Print inso run help
+        run: inso run --help
+
+      - name: Verify directory
+        run: |
+          ls -la /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
+
+      - name: Enter into
+        run: cd /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
+
+      - name: Change permission
+        run: chmod 777 /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data/*
+
+      - name: Verify directory again
+        run: |
+          ls -la /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
+
+      - name: Verify relative path
+        run: |
+          ls -la ./insomnia-data
+
+      - name: Verify CI dir
+        run: |
+          ls -la /home/runner/work/
+
+      - name: Verify CI app dir
+        run: |
+          ls -la /home/runner/work/eagles-postman-newman/
+
+      - name: Verify CI app data
+        run: |
+          ls -la /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data
+
+      - name: Verify root
+        run: |
+          ls -la ~/
+
+      - name: Verify .config
+        run: |
+          ls -la ~/.config/
+
+      # ls -la ~/.config/Insomnia
+      - name: Verify .config/GitHub/ActionsService/8.0
+        run: |
+          ls -la ~/.config/GitHub/ActionsService/8.0
+
+      - name: Verify .config/configstore
+        run: |
+          ls -la ~/.config/configstore
+
+      - name: Run script 1
+        run: inso run test wrk_e1e1ad06132e4625bddace0569de4612 --env env_2b2ddd0cd9598ca8550efea5f2b0771fa6ea0c29 --workingDir /home/runner/work/eagles-postman-newman/eagles-postman-newman/insomnia-data --verbose --printOptions --ci
+      
