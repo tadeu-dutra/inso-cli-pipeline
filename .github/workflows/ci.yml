@@ -17,17 +17,29 @@ jobs:
       # - name: Set up Node.js
       #   uses: actions/setup-node@v3
       #   with:
-      #     node-version: '20.x'
-        # uses: Kong/setup-inso@cf1bf7b12e5d0092399c79025c09eba54d8182f7
-      - name: Setup inso
-        uses: kong/setup-inso@v2
+      # #     node-version: '20.x'
+      #   # uses: Kong/setup-inso@cf1bf7b12e5d0092399c79025c09eba54d8182f7
+      # - name: Setup inso
+      #   uses: kong/setup-inso@v2
+      #   with:
+      #     inso-version: 10.3.1
+      #   # uses: Kong/setup-inso@9857463605f7018f0b10aacdb11b10e3823ce18b
+      #   # # uses: Kong/setup-inso/releases/tag/v2.0.0
+      #   # with:
+      #   #   inso-version: 10.3.1
+      #     # compression: gzip
+
+
+      - uses: kong/setup-inso@v2
         with:
           inso-version: 10.3.1
-        # uses: Kong/setup-inso@9857463605f7018f0b10aacdb11b10e3823ce18b
-        # # uses: Kong/setup-inso/releases/tag/v2.0.0
-        # with:
-        #   inso-version: 10.3.1
-          # compression: gzip
+          wrapper: true
+      - run: inso --version
+        id: inso_version
+      - run: echo '${{ toJson(steps.inso_version.outputs) }}'
+
+
+
       - name: Print inso version
         run: inso --version
 
