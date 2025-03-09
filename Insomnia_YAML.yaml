@@ -1,0 +1,80 @@
+_type: export
+__export_format: 4
+__export_date: 2025-03-09T03:49:32.380Z
+__export_source: insomnia.desktop.app:v10.3.1
+resources:
+  - _id: req_ea8377ef550046b5a6c919cf64bfd005
+    parentId: wrk_babb0e6e694647979693649fc368179d
+    modified: 1741488050243
+    created: 1741487978855
+    url: "{{BASE_URL}}/products"
+    name: New Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1741487978856
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_babb0e6e694647979693649fc368179d
+    parentId: null
+    modified: 1741491858696
+    created: 1741491858696
+    name: my-spec.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: env_6240d4965c659311762025efd96dd4e6b33e561f
+    parentId: wrk_babb0e6e694647979693649fc368179d
+    modified: 1741491858710
+    created: 1741491858710
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1741491858710
+    environmentType: kv
+    _type: environment
+  - _id: jar_6240d4965c659311762025efd96dd4e6b33e561f
+    parentId: wrk_babb0e6e694647979693649fc368179d
+    modified: 1741491858715
+    created: 1741491858715
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_d5b3b5ce9116425abb5ca4aa32093fb9
+    parentId: wrk_babb0e6e694647979693649fc368179d
+    modified: 1741491858702
+    created: 1741491858702
+    fileName: New Document
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_3bb786f5a28044bc935e330c682747cf
+    parentId: wrk_babb0e6e694647979693649fc368179d
+    modified: 1741492075791
+    created: 1741492075791
+    name: New Suite
+    metaSortKey: -1741492075792
+    _type: unit_test_suite
+  - _id: ut_579e91e820aa4a628d05c3a1c739a3bb
+    parentId: uts_3bb786f5a28044bc935e330c682747cf
+    modified: 1741492099301
+    created: 1741492095615
+    requestId: req_ea8377ef550046b5a6c919cf64bfd005
+    name: Returns 200
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    metaSortKey: -1741492095615
+    _type: unit_test
