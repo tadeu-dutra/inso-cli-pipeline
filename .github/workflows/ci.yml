@@ -119,5 +119,5 @@ jobs:
       # - name: Run script 2
       #   run: inso run collection wrk_bd9716d353474b419167322690b72561 --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
       - name: Run script 3
-        run: inso run test wrk_7a1bc182abe146bcb732553ae42ae761 --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
+        run: inso run test req_46f3d4494a924af4aa06ad972a090e9b --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
         # run: inso run collection wrk_babb0e6e694647979693649fc368179d --env env_6240d4965c659311762025efd96dd4e6b33e561f --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
