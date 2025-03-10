@@ -1,0 +1,54 @@
+_type: export
+__export_format: 4
+__export_date: 2025-03-10T08:52:20.928Z
+__export_source: insomnia.desktop.app:v10.3.1
+resources:
+  - _id: req_46f3d4494a924af4aa06ad972a090e9b
+    parentId: wrk_7a1bc182abe146bcb732553ae42ae761
+    modified: 1741596651771
+    created: 1741596627425
+    url: https://dummyjson.com/products
+    name: inzo-cli-request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1741596627425
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_7a1bc182abe146bcb732553ae42ae761
+    parentId: null
+    modified: 1741596620855
+    created: 1741596620855
+    name: inzo-cli-collection
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: env_36cfb4ce0af90be4abbc440215cdffa082b9ff7e
+    parentId: wrk_7a1bc182abe146bcb732553ae42ae761
+    modified: 1741596620860
+    created: 1741596620860
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1741596620860
+    environmentType: kv
+    _type: environment
+  - _id: jar_36cfb4ce0af90be4abbc440215cdffa082b9ff7e
+    parentId: wrk_7a1bc182abe146bcb732553ae42ae761
+    modified: 1741596620864
+    created: 1741596620864
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
