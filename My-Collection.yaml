@@ -1,0 +1,58 @@
+_type: export
+__export_format: 4
+__export_date: 2025-03-15T06:58:19.423Z
+__export_source: insomnia.desktop.app:v10.3.1
+resources:
+  - _id: req_2261406063f04ea0b9ca7eeb116a02c3
+    parentId: wrk_1fb55b4d0c514ca591ca1d6ee059139a
+    modified: 1742004342257
+    created: 1742003478241
+    url: https://dummyjson.com/products/1
+    name: New Request
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1742003478241
+    isPrivate: false
+    pathParameters: []
+    afterResponseScript: |
+      insomnia.test("Status code is 200", function () {
+        insomnia.response.to.have.status(200);
+      });
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_1fb55b4d0c514ca591ca1d6ee059139a
+    parentId: null
+    modified: 1742003472386
+    created: 1742003472386
+    name: My Collection
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: env_4ff1a5f7fd0a9b4db4f899692b5384fed81f7fe5
+    parentId: wrk_1fb55b4d0c514ca591ca1d6ee059139a
+    modified: 1742021853051
+    created: 1742003472390
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1742003472390
+    environmentType: kv
+    _type: environment
+  - _id: jar_4ff1a5f7fd0a9b4db4f899692b5384fed81f7fe5
+    parentId: wrk_1fb55b4d0c514ca591ca1d6ee059139a
+    modified: 1742021853047
+    created: 1742003472395
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar

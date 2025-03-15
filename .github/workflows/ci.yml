@@ -23,4 +23,5 @@ jobs:
         run: inso --version
 
       - name: Run with spec report (default)
-        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection.yaml --reporter spec
+        run: inso run collection "My Collection" -w ./My-Collection.yaml --reporter spec
+        # run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection.yaml --reporter spec
