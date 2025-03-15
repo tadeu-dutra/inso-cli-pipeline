@@ -28,7 +28,7 @@ jobs:
       #   run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter list
       - name: Run with spec report (default)
         run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter spec
-      - name: Run with min report
-        run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter min
-      - name: Run with progress report
-        run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter progress
+      # - name: Run with min report
+      #   run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter min
+      # - name: Run with progress report
+      #   run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter progress

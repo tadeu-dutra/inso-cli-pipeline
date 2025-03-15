@@ -2692,11 +2692,11 @@ resources:
     name: Default Jar
     cookies: []
     _type: cookie_jar
-  - _id: spc_d70c6e466c8c4a6b9c111c8f32c0da41
-    parentId: wrk_1c417c13210e42d1b4da6345a53e6534
-    modified: 1740378879706
-    created: 1740378879706
-    fileName: Tadeu-QualityEagles-Collection
-    contents: ""
-    contentType: yaml
-    _type: api_spec
+  # - _id: spc_d70c6e466c8c4a6b9c111c8f32c0da41
+  #   parentId: wrk_1c417c13210e42d1b4da6345a53e6534
+  #   modified: 1740378879706
+  #   created: 1740378879706
+  #   fileName: Tadeu-QualityEagles-Collection
+  #   contents: ""
+  #   contentType: yaml
+  #   _type: api_spec
