@@ -30,20 +30,20 @@ jobs:
       #     # compression: gzip
 
 
-      # # a) setup-inso@v2
-      # - name: Setup inso
-      #   uses: kong/setup-inso@v2
-      #   with:
-      #     inso-version: 10.3.1
-
-      # a) setup-inso@v2 with wrapper
-      - uses: kong/setup-inso@v2
+      # a) setup-inso@v2
+      - name: Setup inso
+        uses: kong/setup-inso@v2
         with:
           inso-version: 10.3.1
-          wrapper: true
-      - run: inso --version
-        id: inso_version
-      - run: echo '${{ toJson(steps.inso_version.outputs) }}'
+
+      # # a) setup-inso@v2 with wrapper
+      # - uses: kong/setup-inso@v2
+      #   with:
+      #     inso-version: 10.3.1
+      #     wrapper: true
+      # - run: inso --version
+      #   id: inso_version
+      # - run: echo '${{ toJson(steps.inso_version.outputs) }}'
 
 
 
@@ -119,6 +119,6 @@ jobs:
       # - name: Run script 2
       #   run: inso run collection wrk_bd9716d353474b419167322690b72561 --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
       - name: Run insomnia test suite
-        run: inso run test -w ./TEST-Tadeu-QualityEagles-Collection_Insomnia.yaml
+        run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./TEST-Tadeu-QualityEagles-Collection_Insomnia.yaml
         # run: inso run collection wrk_7a1bc182abe146bcb732553ae42ae761 --verbose --printOptions --ci
         # run: inso run collection wrk_babb0e6e694647979693649fc368179d --env env_6240d4965c659311762025efd96dd4e6b33e561f --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci

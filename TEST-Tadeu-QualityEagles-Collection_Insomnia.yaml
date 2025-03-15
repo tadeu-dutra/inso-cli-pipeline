@@ -2694,8 +2694,8 @@ resources:
     _type: cookie_jar
   - _id: spc_d70c6e466c8c4a6b9c111c8f32c0da41
     parentId: wrk_1c417c13210e42d1b4da6345a53e6534
-    modified: 1742011678436
-    created: 1740367631056
+    modified: 1740378879706
+    created: 1740378879706
     fileName: Tadeu-QualityEagles-Collection
     contents: ""
     contentType: yaml
