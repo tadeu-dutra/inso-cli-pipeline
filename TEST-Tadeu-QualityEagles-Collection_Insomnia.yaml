@@ -1322,93 +1322,93 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_453e9895e2b4408983d3b6bf36908846
-    parentId: fld_11a72af58ea04709bc164f9bfdcf8f23
-    modified: 1740416040138
-    created: 1740379533181
-    url: "{{BaseUrl}}/api/company"
-    name: "[BUG 21425 / Lucas] Nome da Empresa - Campo obrigatório"
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "corporateName": "",
-          "registerCompany": "{{Cnpj}}",
-          "mail": "test@test.com",
-          "matriz": "Teste",
-          "responsibleContact": "Marcio",
-          "telephone": "99999999999999",
-          "serviceDescription": "Testes",
-          "address": [
-            {
-              "zipCode": "04777001",
-              "city": "São Paulo",
-              "state": "SP",
-              "district": "Rua das Flores",
-              "street": "Avenida Interlagos",
-              "number": "50",
-              "complement": "de 4503 ao fim - lado ímpar",
-              "country": "Brasil"
-            }
-          ]
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication:
-      type: apikey
-      disabled: false
-      key: Authorization
-      value: "{{TokenUser}}"
-      addTo: header
-    preRequestScript: >-
-      insomnia.execution.skipRequest()
+  # - _id: req_453e9895e2b4408983d3b6bf36908846
+  #   parentId: fld_11a72af58ea04709bc164f9bfdcf8f23
+  #   modified: 1740416040138
+  #   created: 1740379533181
+  #   url: "{{BaseUrl}}/api/company"
+  #   name: "[BUG 21425 / Lucas] Nome da Empresa - Campo obrigatório"
+  #   description: ""
+  #   method: POST
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "corporateName": "",
+  #         "registerCompany": "{{Cnpj}}",
+  #         "mail": "test@test.com",
+  #         "matriz": "Teste",
+  #         "responsibleContact": "Marcio",
+  #         "telephone": "99999999999999",
+  #         "serviceDescription": "Testes",
+  #         "address": [
+  #           {
+  #             "zipCode": "04777001",
+  #             "city": "São Paulo",
+  #             "state": "SP",
+  #             "district": "Rua das Flores",
+  #             "street": "Avenida Interlagos",
+  #             "number": "50",
+  #             "complement": "de 4503 ao fim - lado ímpar",
+  #             "country": "Brasil"
+  #           }
+  #         ]
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication:
+  #     type: apikey
+  #     disabled: false
+  #     key: Authorization
+  #     value: "{{TokenUser}}"
+  #     addTo: header
+  #   preRequestScript: >-
+  #     insomnia.execution.skipRequest()
 
 
-      // Function to generate a random 14-digit number
+  #     // Function to generate a random 14-digit number
 
-      function generateRandomDigitNumber() {
-          // Generate a random number between 0 and 10^11 - 1
-          let randomNumber = Math.floor(Math.random() * 1e14);
+  #     function generateRandomDigitNumber() {
+  #         // Generate a random number between 0 and 10^11 - 1
+  #         let randomNumber = Math.floor(Math.random() * 1e14);
 
-          // Ensure that the number has 11 digits by padding with leading zeros if necessary
-          return String(randomNumber).padStart(14, '0');
-      }
-
-
-      // Generate the random number
-
-      let randomDigitNumber = generateRandomDigitNumber();
+  #         // Ensure that the number has 11 digits by padding with leading zeros if necessary
+  #         return String(randomNumber).padStart(14, '0');
+  #     }
 
 
-      // Set the number as an environment variable
+  #     // Generate the random number
 
-      insomnia.environment.set("Cnpj", randomDigitNumber);
-
-
-      ////////////////////////////////////////////////////////////////
-    metaSortKey: -1740379533181
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >
-      insomnia.test("Status code is 400", () => {
-          insomnia.response.to.have.status(400);
-      });
+  #     let randomDigitNumber = generateRandomDigitNumber();
 
 
-      insomnia.test('Validate corporate name is empty', () => {
-      	insomnia.expect('ValidationError: corporateName: O campo \'corporateName\' é obrigatório.').to.equal(insomnia.response.json().error);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  #     // Set the number as an environment variable
+
+  #     insomnia.environment.set("Cnpj", randomDigitNumber);
+
+
+  #     ////////////////////////////////////////////////////////////////
+  #   metaSortKey: -1740379533181
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >
+  #     insomnia.test("Status code is 400", () => {
+  #         insomnia.response.to.have.status(400);
+  #     });
+
+
+  #     insomnia.test('Validate corporate name is empty', () => {
+  #     	insomnia.expect('ValidationError: corporateName: O campo \'corporateName\' é obrigatório.').to.equal(insomnia.response.json().error);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: fld_11a72af58ea04709bc164f9bfdcf8f23
     parentId: fld_ce24787bc62c40d5a4314e0bdcd34264
     modified: 1740378750025
@@ -1849,344 +1849,344 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_1301326913b3413fb5a38753b310d9ac
-    parentId: fld_af6e68379a5643dc9d43bd7dee1a7c18
-    modified: 1740416485658
-    created: 1740382693560
-    url: "{{BaseUrl}}/api/company/address/{{IdCompany}}"
-    name: "[BUG 21338 / Ítalo] Editar dados de Endereço da Empresa com Sucesso"
-    description: ""
-    method: PUT
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "corporateName": "test",
-          "registerCompany": "{{Cnpj}}",
-          "mail": "test@test.com",
-          "matriz": "Teste",
-          "responsibleContact": "Marcio",
-          "telephone": "99999999999999",
-          "serviceDescription": "Testes",
-          "address": [
-            {
-              "zipCode": "{{randomZipCode}}",
-              "city": "{{randomCity}}",
-              "state": "{{randomState}}",
-              "district": "{{randomDistrict}}",
-              "street": "{{randomStreet}}",
-              "number": "{{randomNumber}}",
-              "complement": "{{randomAddressComplement}}",
-              "country": "{{randomCountry}}"
-            }
-          ]
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication:
-      type: apikey
-      key: Authorization
-      value: "{{TokenUser}}"
-      addTo: header
-      disabled: false
-    preRequestScript: >-
-      insomnia.execution.skipRequest()
+  # - _id: req_1301326913b3413fb5a38753b310d9ac
+  #   parentId: fld_af6e68379a5643dc9d43bd7dee1a7c18
+  #   modified: 1740416485658
+  #   created: 1740382693560
+  #   url: "{{BaseUrl}}/api/company/address/{{IdCompany}}"
+  #   name: "[BUG 21338 / Ítalo] Editar dados de Endereço da Empresa com Sucesso"
+  #   description: ""
+  #   method: PUT
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "corporateName": "test",
+  #         "registerCompany": "{{Cnpj}}",
+  #         "mail": "test@test.com",
+  #         "matriz": "Teste",
+  #         "responsibleContact": "Marcio",
+  #         "telephone": "99999999999999",
+  #         "serviceDescription": "Testes",
+  #         "address": [
+  #           {
+  #             "zipCode": "{{randomZipCode}}",
+  #             "city": "{{randomCity}}",
+  #             "state": "{{randomState}}",
+  #             "district": "{{randomDistrict}}",
+  #             "street": "{{randomStreet}}",
+  #             "number": "{{randomNumber}}",
+  #             "complement": "{{randomAddressComplement}}",
+  #             "country": "{{randomCountry}}"
+  #           }
+  #         ]
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication:
+  #     type: apikey
+  #     key: Authorization
+  #     value: "{{TokenUser}}"
+  #     addTo: header
+  #     disabled: false
+  #   preRequestScript: >-
+  #     insomnia.execution.skipRequest()
 
 
-      // Function to generate a random zip code with exactly 8 digits
+  #     // Function to generate a random zip code with exactly 8 digits
 
-      function generateRandomZipCode() {
-          const minValue = 10000000; // Minimum 8-digit number
-          const maxValue = 99999999; // Maximum 8-digit number
+  #     function generateRandomZipCode() {
+  #         const minValue = 10000000; // Minimum 8-digit number
+  #         const maxValue = 99999999; // Maximum 8-digit number
           
-          // Generate a random number between minValue and maxValue
-          const randomZipCode = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
-          return randomZipCode.toString();
-      }
+  #         // Generate a random number between minValue and maxValue
+  #         const randomZipCode = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+  #         return randomZipCode.toString();
+  #     }
 
 
-      // Generate the random zip code
+  #     // Generate the random zip code
 
-      let randomZipCode = generateRandomZipCode();
+  #     let randomZipCode = generateRandomZipCode();
 
 
-      // Set the random zip code as an environment variable
+  #     // Set the random zip code as an environment variable
 
-      insomnia.environment.set("randomZipCode", randomZipCode);
+  #     insomnia.environment.set("randomZipCode", randomZipCode);
 
 
-      // Log the zip code to the console for verification
+  #     // Log the zip code to the console for verification
 
-      console.log("Generated Random Zip Code:", randomZipCode);
+  #     console.log("Generated Random Zip Code:", randomZipCode);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // List of sample city names; you can customize this list with more options
+  #     // List of sample city names; you can customize this list with more options
 
-      const cities = [
-          "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
-          "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
-          "Austin", "Jacksonville", "Fort Worth", "Columbus", "Charlotte",
-          "San Francisco", "Indianapolis", "Seattle", "Denver", "Washington"
-      ];
+  #     const cities = [
+  #         "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
+  #         "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
+  #         "Austin", "Jacksonville", "Fort Worth", "Columbus", "Charlotte",
+  #         "San Francisco", "Indianapolis", "Seattle", "Denver", "Washington"
+  #     ];
 
 
-      // Function to select a random city from the list
+  #     // Function to select a random city from the list
 
-      function getRandomCity() {
-          const randomIndex = Math.floor(Math.random() * cities.length);
-          return cities[randomIndex];
-      }
+  #     function getRandomCity() {
+  #         const randomIndex = Math.floor(Math.random() * cities.length);
+  #         return cities[randomIndex];
+  #     }
 
 
-      // Generate the random city name
+  #     // Generate the random city name
 
-      let randomCity = getRandomCity();
+  #     let randomCity = getRandomCity();
 
 
-      // Set the random city name as an environment variable
+  #     // Set the random city name as an environment variable
 
-      insomnia.environment.set("randomCity", randomCity);
+  #     insomnia.environment.set("randomCity", randomCity);
 
 
-      // Log the city name to the console for verification
+  #     // Log the city name to the console for verification
 
-      console.log("Generated Random City:", randomCity);
+  #     console.log("Generated Random City:", randomCity);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // List of Brazilian states by their abbreviations
+  #     // List of Brazilian states by their abbreviations
 
-      const states = [
-          "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA",
-          "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
-          "RS", "RO", "RR", "SC", "SP", "SE", "TO"
-      ];
+  #     const states = [
+  #         "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA",
+  #         "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
+  #         "RS", "RO", "RR", "SC", "SP", "SE", "TO"
+  #     ];
 
 
-      // Function to select a random state from the list
+  #     // Function to select a random state from the list
 
-      function getRandomState() {
-          const randomIndex = Math.floor(Math.random() * states.length);
-          return states[randomIndex];
-      }
+  #     function getRandomState() {
+  #         const randomIndex = Math.floor(Math.random() * states.length);
+  #         return states[randomIndex];
+  #     }
 
 
-      // Generate the random state
+  #     // Generate the random state
 
-      let randomState = getRandomState();
+  #     let randomState = getRandomState();
 
 
-      // Set the random state as an environment variable
+  #     // Set the random state as an environment variable
 
-      insomnia.environment.set("randomState", randomState);
+  #     insomnia.environment.set("randomState", randomState);
 
 
-      // Log the state to the console for verification
+  #     // Log the state to the console for verification
 
-      console.log("Generated Random Brazilian State:", randomState);
+  #     console.log("Generated Random Brazilian State:", randomState);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // List of sample district names; customize this list with relevant district names
+  #     // List of sample district names; customize this list with relevant district names
 
-      const districts = [
-          "Downtown", "Uptown", "West End", "East Side", "Northfield",
-          "South Park", "Old Town", "New City", "Lakeside", "Hilltop",
-          "Riverbend", "Greenfield", "Meadowlands", "Brookside", "Sunnyvale"
-      ];
+  #     const districts = [
+  #         "Downtown", "Uptown", "West End", "East Side", "Northfield",
+  #         "South Park", "Old Town", "New City", "Lakeside", "Hilltop",
+  #         "Riverbend", "Greenfield", "Meadowlands", "Brookside", "Sunnyvale"
+  #     ];
 
 
-      // Function to select a random district from the list
+  #     // Function to select a random district from the list
 
-      function getRandomDistrict() {
-          const randomIndex = Math.floor(Math.random() * districts.length);
-          return districts[randomIndex];
-      }
+  #     function getRandomDistrict() {
+  #         const randomIndex = Math.floor(Math.random() * districts.length);
+  #         return districts[randomIndex];
+  #     }
 
 
-      // Generate the random district name
+  #     // Generate the random district name
 
-      let randomDistrict = getRandomDistrict();
+  #     let randomDistrict = getRandomDistrict();
 
 
-      // Set the random district name as an environment variable
+  #     // Set the random district name as an environment variable
 
-      insomnia.environment.set("randomDistrict", randomDistrict);
+  #     insomnia.environment.set("randomDistrict", randomDistrict);
 
 
-      // Log the district name to the console for verification
+  #     // Log the district name to the console for verification
 
-      console.log("Generated Random District:", randomDistrict);
+  #     console.log("Generated Random District:", randomDistrict);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // List of sample street names; you can customize this list with relevant street names
+  #     // List of sample street names; you can customize this list with relevant street names
 
-      const streets = [
-          "Main Street", "High Street", "Broadway", "Maple Avenue", "Elm Street",
-          "Oak Street", "Pine Street", "Cedar Avenue", "Sunset Boulevard", "Park Lane",
-          "5th Avenue", "6th Avenue", "7th Avenue", "8th Avenue", "9th Avenue",
-          "1st Street", "2nd Street", "3rd Street", "4th Street", "Hill Street"
-      ];
+  #     const streets = [
+  #         "Main Street", "High Street", "Broadway", "Maple Avenue", "Elm Street",
+  #         "Oak Street", "Pine Street", "Cedar Avenue", "Sunset Boulevard", "Park Lane",
+  #         "5th Avenue", "6th Avenue", "7th Avenue", "8th Avenue", "9th Avenue",
+  #         "1st Street", "2nd Street", "3rd Street", "4th Street", "Hill Street"
+  #     ];
 
 
-      // Function to select a random street from the list
+  #     // Function to select a random street from the list
 
-      function getRandomStreet() {
-          const randomIndex = Math.floor(Math.random() * streets.length);
-          return streets[randomIndex];
-      }
+  #     function getRandomStreet() {
+  #         const randomIndex = Math.floor(Math.random() * streets.length);
+  #         return streets[randomIndex];
+  #     }
 
 
-      // Generate the random street name
+  #     // Generate the random street name
 
-      let randomStreet = getRandomStreet();
+  #     let randomStreet = getRandomStreet();
 
 
-      // Set the random street name as an environment variable
+  #     // Set the random street name as an environment variable
 
-      insomnia.environment.set("randomStreet", randomStreet);
+  #     insomnia.environment.set("randomStreet", randomStreet);
 
 
-      // Log the street name to the console for verification
+  #     // Log the street name to the console for verification
 
-      console.log("Generated Random Street:", randomStreet);
+  #     console.log("Generated Random Street:", randomStreet);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // Function to generate a random number with fewer than 10 digits
+  #     // Function to generate a random number with fewer than 10 digits
 
-      function generateRandomNumber(maxDigits) {
-          // Calculate the maximum value for the given number of digits
-          const maxValue = Math.pow(10, maxDigits) - 1;
+  #     function generateRandomNumber(maxDigits) {
+  #         // Calculate the maximum value for the given number of digits
+  #         const maxValue = Math.pow(10, maxDigits) - 1;
           
-          // Generate a random number between 0 and maxValue
-          return Math.floor(Math.random() * (maxValue + 1));
-      }
+  #         // Generate a random number between 0 and maxValue
+  #         return Math.floor(Math.random() * (maxValue + 1));
+  #     }
 
 
-      // Set the maximum number of digits (less than 10)
+  #     // Set the maximum number of digits (less than 10)
 
-      const maxDigits = 9; // Change this value if you want fewer digits
-
-
-      // Generate the random number
-
-      let randomNumber = generateRandomNumber(maxDigits);
+  #     const maxDigits = 9; // Change this value if you want fewer digits
 
 
-      // Set the random number as an environment variable
+  #     // Generate the random number
 
-      insomnia.environment.set("randomNumber", randomNumber);
-
-
-      // Log the random number to the console for verification
-
-      console.log("Generated Random Number:", randomNumber);
+  #     let randomNumber = generateRandomNumber(maxDigits);
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     // Set the random number as an environment variable
+
+  #     insomnia.environment.set("randomNumber", randomNumber);
 
 
-      // List of sample address complements; customize this list with relevant options
+  #     // Log the random number to the console for verification
 
-      const addressComplements = [
-          "Apt. 101", "Suite 202", "Floor 3", "Building A", "Unit B12",
-          "Penthouse", "Room 404", "Basement", "Annex", "Rear Entrance",
-          "Front Desk", "Mailbox 5", "Gate 2", "Lot 15", "Tower 3",
-          "Block C", "Wing East", "Section 8", "Cabin 12", "Cottage"
-      ];
+  #     console.log("Generated Random Number:", randomNumber);
 
 
-      // Function to select a random address complement from the list
-
-      function getRandomAddressComplement() {
-          const randomIndex = Math.floor(Math.random() * addressComplements.length);
-          return addressComplements[randomIndex];
-      }
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      // Generate the random address complement
+  #     // List of sample address complements; customize this list with relevant options
 
-      let randomAddressComplement = getRandomAddressComplement();
-
-
-      // Set the random address complement as an environment variable
-
-      insomnia.environment.set("randomAddressComplement", randomAddressComplement);
-
-
-      // Log the address complement to the console for verification
-
-      console.log("Generated Random Address Complement:", randomAddressComplement);
+  #     const addressComplements = [
+  #         "Apt. 101", "Suite 202", "Floor 3", "Building A", "Unit B12",
+  #         "Penthouse", "Room 404", "Basement", "Annex", "Rear Entrance",
+  #         "Front Desk", "Mailbox 5", "Gate 2", "Lot 15", "Tower 3",
+  #         "Block C", "Wing East", "Section 8", "Cabin 12", "Cottage"
+  #     ];
 
 
-      ////////////////////////////////////////////////////////////////////////////////////////
+  #     // Function to select a random address complement from the list
+
+  #     function getRandomAddressComplement() {
+  #         const randomIndex = Math.floor(Math.random() * addressComplements.length);
+  #         return addressComplements[randomIndex];
+  #     }
 
 
-      // List of sample country names; you can customize this list with more options
+  #     // Generate the random address complement
 
-      const countries = [
-          "United States", "Canada", "Brazil", "United Kingdom", "Germany",
-          "France", "Australia", "India", "China", "Japan",
-          "Mexico", "Italy", "Spain", "Russia", "South Africa",
-          "Argentina", "New Zealand", "Netherlands", "Sweden", "Norway"
-      ];
+  #     let randomAddressComplement = getRandomAddressComplement();
 
 
-      // Function to select a random country from the list
+  #     // Set the random address complement as an environment variable
 
-      function getRandomCountry() {
-          const randomIndex = Math.floor(Math.random() * countries.length);
-          return countries[randomIndex];
-      }
+  #     insomnia.environment.set("randomAddressComplement", randomAddressComplement);
 
 
-      // Generate the random country name
+  #     // Log the address complement to the console for verification
 
-      let randomCountry = getRandomCountry();
-
-
-      // Set the random country name as an environment variable
-
-      insomnia.environment.set("randomCountry", randomCountry);
+  #     console.log("Generated Random Address Complement:", randomAddressComplement);
 
 
-      // Log the country name to the console for verification
-
-      console.log("Generated Random Country:", randomCountry);
-    metaSortKey: -1740381111113
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >
-      insomnia.test('Status code is 200', () => {
-          insomnia.response.to.have.status(200);
-      });
+  #     ////////////////////////////////////////////////////////////////////////////////////////
 
 
-      insomnia.test('Validate response message', () => {
-      	insomnia.expect('Endereço da companhia atualizado com sucesso.').to.equal(insomnia.response.json().msg);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  #     // List of sample country names; you can customize this list with more options
+
+  #     const countries = [
+  #         "United States", "Canada", "Brazil", "United Kingdom", "Germany",
+  #         "France", "Australia", "India", "China", "Japan",
+  #         "Mexico", "Italy", "Spain", "Russia", "South Africa",
+  #         "Argentina", "New Zealand", "Netherlands", "Sweden", "Norway"
+  #     ];
+
+
+  #     // Function to select a random country from the list
+
+  #     function getRandomCountry() {
+  #         const randomIndex = Math.floor(Math.random() * countries.length);
+  #         return countries[randomIndex];
+  #     }
+
+
+  #     // Generate the random country name
+
+  #     let randomCountry = getRandomCountry();
+
+
+  #     // Set the random country name as an environment variable
+
+  #     insomnia.environment.set("randomCountry", randomCountry);
+
+
+  #     // Log the country name to the console for verification
+
+  #     console.log("Generated Random Country:", randomCountry);
+  #   metaSortKey: -1740381111113
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >
+  #     insomnia.test('Status code is 200', () => {
+  #         insomnia.response.to.have.status(200);
+  #     });
+
+
+  #     insomnia.test('Validate response message', () => {
+  #     	insomnia.expect('Endereço da companhia atualizado com sucesso.').to.equal(insomnia.response.json().msg);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: req_3f50122af78e49928c91b7ebfb7c06ac
     parentId: fld_af6e68379a5643dc9d43bd7dee1a7c18
     modified: 1740416112888
@@ -2336,38 +2336,38 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_e889d72e11f24e48b240199493c92cbd
-    parentId: fld_c004bf75cf544196842043fd5013ea7d
-    modified: 1740421367216
-    created: 1740411046198
-    url: "{{BaseUrl}}/api/company/{{IdCompany}}"
-    name: "[BUG 21364 / Carol] Consultar empresa por ID com sucesso"
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers: []
-    authentication:
-      type: apikey
-      disabled: false
-      key: Authorization
-      value: "{{TokenUser}}"
-      addTo: header
-    preRequestScript: insomnia.execution.skipRequest()
-    metaSortKey: -1740391847394
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: |
-      insomnia.test("Status code is 200", function () {
-          insomnia.response.to.have.status(200);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  # - _id: req_e889d72e11f24e48b240199493c92cbd
+  #   parentId: fld_c004bf75cf544196842043fd5013ea7d
+  #   modified: 1740421367216
+  #   created: 1740411046198
+  #   url: "{{BaseUrl}}/api/company/{{IdCompany}}"
+  #   name: "[BUG 21364 / Carol] Consultar empresa por ID com sucesso"
+  #   description: ""
+  #   method: GET
+  #   body: {}
+  #   parameters: []
+  #   headers: []
+  #   authentication:
+  #     type: apikey
+  #     disabled: false
+  #     key: Authorization
+  #     value: "{{TokenUser}}"
+  #     addTo: header
+  #   preRequestScript: insomnia.execution.skipRequest()
+  #   metaSortKey: -1740391847394
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: |
+  #     insomnia.test("Status code is 200", function () {
+  #         insomnia.response.to.have.status(200);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: fld_c004bf75cf544196842043fd5013ea7d
     parentId: fld_ce24787bc62c40d5a4314e0bdcd34264
     modified: 1740378841748
@@ -2415,50 +2415,50 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_86fdc24090904cdaa3fbff875243e961
-    parentId: fld_215ebf8d3f8b47a1b0b0a8317a99f7b2
-    modified: 1740421734028
-    created: 1740410821286
-    url: "{{BaseUrl}}/api/company/status/{{IdCompany}}"
-    name: "[BUG 21955 / Tadeu] Editar status de uma empresa para false"
-    description: ""
-    method: PUT
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "status": false
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication:
-      type: apikey
-      disabled: false
-      key: Authorization
-      value: "{{TokenUser}}"
-      addTo: header
-    preRequestScript: insomnia.execution.skipRequest()
-    metaSortKey: -1740411549036
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >
-      insomnia.test("Status code is 200", function () {
-          insomnia.response.to.have.status(200);
-      });
+  # - _id: req_86fdc24090904cdaa3fbff875243e961
+  #   parentId: fld_215ebf8d3f8b47a1b0b0a8317a99f7b2
+  #   modified: 1740421734028
+  #   created: 1740410821286
+  #   url: "{{BaseUrl}}/api/company/status/{{IdCompany}}"
+  #   name: "[BUG 21955 / Tadeu] Editar status de uma empresa para false"
+  #   description: ""
+  #   method: PUT
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "status": false
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication:
+  #     type: apikey
+  #     disabled: false
+  #     key: Authorization
+  #     value: "{{TokenUser}}"
+  #     addTo: header
+  #   preRequestScript: insomnia.execution.skipRequest()
+  #   metaSortKey: -1740411549036
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >
+  #     insomnia.test("Status code is 200", function () {
+  #         insomnia.response.to.have.status(200);
+  #     });
 
 
-      insomnia.test('Validate company status is false', () => {
-      	insomnia.expect(insomnia.response.json().updateCompany.status).to.equal(false);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  #     insomnia.test('Validate company status is false', () => {
+  #     	insomnia.expect(insomnia.response.json().updateCompany.status).to.equal(false);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: fld_215ebf8d3f8b47a1b0b0a8317a99f7b2
     parentId: fld_ce24787bc62c40d5a4314e0bdcd34264
     modified: 1740378860131
@@ -2470,50 +2470,50 @@ resources:
     metaSortKey: -1740367593722.0723
     environmentType: kv
     _type: request_group
-  - _id: req_62eb38802c64469a9d160805ec72c561
-    parentId: fld_215ebf8d3f8b47a1b0b0a8317a99f7b2
-    modified: 1740421738739
-    created: 1740412582744
-    url: "{{BaseUrl}}/api/company/status/{{IdCompany}}"
-    name: "[BUG 21957 / Tadeu] Editar status de uma empresa para true"
-    description: ""
-    method: PUT
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "status": true
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication:
-      type: apikey
-      disabled: false
-      key: Authorization
-      value: "{{TokenUser}}"
-      addTo: header
-    preRequestScript: insomnia.execution.skipRequest()
-    metaSortKey: -1740401698215
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >-
-      insomnia.test("Status code is 200", function () {
-          insomnia.response.to.have.status(200);
-      });
+  # - _id: req_62eb38802c64469a9d160805ec72c561
+  #   parentId: fld_215ebf8d3f8b47a1b0b0a8317a99f7b2
+  #   modified: 1740421738739
+  #   created: 1740412582744
+  #   url: "{{BaseUrl}}/api/company/status/{{IdCompany}}"
+  #   name: "[BUG 21957 / Tadeu] Editar status de uma empresa para true"
+  #   description: ""
+  #   method: PUT
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "status": true
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication:
+  #     type: apikey
+  #     disabled: false
+  #     key: Authorization
+  #     value: "{{TokenUser}}"
+  #     addTo: header
+  #   preRequestScript: insomnia.execution.skipRequest()
+  #   metaSortKey: -1740401698215
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >-
+  #     insomnia.test("Status code is 200", function () {
+  #         insomnia.response.to.have.status(200);
+  #     });
 
 
-      insomnia.test('Validate company status is false', () => {
-      	insomnia.expect(insomnia.response.json().updateCompany.status).to.equal(true);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  #     insomnia.test('Validate company status is false', () => {
+  #     	insomnia.expect(insomnia.response.json().updateCompany.status).to.equal(true);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: req_725e74677d934923af3c5a107bef5f78
     parentId: fld_1a993ad112bc46578b0ecb812e655da2
     modified: 1740412848126
