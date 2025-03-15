@@ -74,91 +74,91 @@ resources:
     description: ""
     scope: collection
     _type: workspace
-  - _id: req_8f7bd2dcb4414aa8be06e2e564c2652e
-    parentId: fld_f987dff136f247f484f02efa7016555f
-    modified: 1740415321364
-    created: 1740368450439
-    url: "{{BaseUrl}}/api/login/"
-    name: "[BUG 20792 / Carol] Login com e-mail válido e senha em branco"
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "mail": "{{MailAdm}}",
-          "password": ""
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication: {}
-    preRequestScript: insomnia.execution.skipRequest()
-    metaSortKey: -1740367757503.5
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >-
-      insomnia.test("Status code is 400", () => {
-          insomnia.response.to.have.status(400);
-      });
+  # - _id: req_8f7bd2dcb4414aa8be06e2e564c2652e
+  #   parentId: fld_f987dff136f247f484f02efa7016555f
+  #   modified: 1740415321364
+  #   created: 1740368450439
+  #   url: "{{BaseUrl}}/api/login/"
+  #   name: "[BUG 20792 / Carol] Login com e-mail válido e senha em branco"
+  #   description: ""
+  #   method: POST
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "mail": "{{MailAdm}}",
+  #         "password": ""
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication: {}
+  #   preRequestScript: insomnia.execution.skipRequest()
+  #   metaSortKey: -1740367757503.5
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >-
+  #     insomnia.test("Status code is 400", () => {
+  #         insomnia.response.to.have.status(400);
+  #     });
 
 
-      insomnia.test('Validate response password message', () => {
-      	insomnia.expect('O campo senha é obrigatório.').to.equal(insomnia.response.json().password);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_76f8ad384ede4f94b856634f5c1e142e
-    parentId: fld_f987dff136f247f484f02efa7016555f
-    modified: 1740416000352
-    created: 1740369309177
-    url: "{{BaseUrl}}/api/login/"
-    name: "[BUG 21093 / Iza] Login com email em branco e senha em branco"
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-          "mail": "",
-          "password": ""
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-    authentication: {}
-    preRequestScript: insomnia.execution.skipRequest()
-    metaSortKey: -1740367675480.25
-    isPrivate: false
-    pathParameters: []
-    afterResponseScript: >-
-      insomnia.test("Status code is 400", () => {
-          insomnia.response.to.have.status(400);
-      });
+  #     insomnia.test('Validate response password message', () => {
+  #     	insomnia.expect('O campo senha é obrigatório.').to.equal(insomnia.response.json().password);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
+  # - _id: req_76f8ad384ede4f94b856634f5c1e142e
+  #   parentId: fld_f987dff136f247f484f02efa7016555f
+  #   modified: 1740416000352
+  #   created: 1740369309177
+  #   url: "{{BaseUrl}}/api/login/"
+  #   name: "[BUG 21093 / Iza] Login com email em branco e senha em branco"
+  #   description: ""
+  #   method: POST
+  #   body:
+  #     mimeType: application/json
+  #     text: |-
+  #       {
+  #         "mail": "",
+  #         "password": ""
+  #       }
+  #   parameters: []
+  #   headers:
+  #     - name: Content-Type
+  #       value: application/json
+  #   authentication: {}
+  #   preRequestScript: insomnia.execution.skipRequest()
+  #   metaSortKey: -1740367675480.25
+  #   isPrivate: false
+  #   pathParameters: []
+  #   afterResponseScript: >-
+  #     insomnia.test("Status code is 400", () => {
+  #         insomnia.response.to.have.status(400);
+  #     });
 
 
-      insomnia.test('Validate response mail message', () => {
-      	insomnia.expect('O campo e-mail é obrigatório.').to.equal(insomnia.response.json().mail);
-      });
+  #     insomnia.test('Validate response mail message', () => {
+  #     	insomnia.expect('O campo e-mail é obrigatório.').to.equal(insomnia.response.json().mail);
+  #     });
 
 
-      insomnia.test('Validate response password message', () => {
-      	insomnia.expect('O campo senha é obrigatório.').to.equal(insomnia.response.json().password);
-      });
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+  #     insomnia.test('Validate response password message', () => {
+  #     	insomnia.expect('O campo senha é obrigatório.').to.equal(insomnia.response.json().password);
+  #     });
+  #   settingStoreCookies: true
+  #   settingSendCookies: true
+  #   settingDisableRenderRequestBody: false
+  #   settingEncodeUrl: true
+  #   settingRebuildPath: true
+  #   settingFollowRedirects: global
+  #   _type: request
   - _id: req_736e0ba719974df2b63186b08156a194
     parentId: fld_f987dff136f247f484f02efa7016555f
     modified: 1740374045323
