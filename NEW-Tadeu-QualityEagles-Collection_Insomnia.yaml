@@ -94,7 +94,8 @@ resources:
       - name: Content-Type
         value: application/json
     authentication: {}
-    preRequestScript: insomnia.execution.skipRequest()
+    preRequestScript:  >-
+      insomnia.execution.skipRequest()
     metaSortKey: -1740367757503.5
     isPrivate: false
     pathParameters: []
