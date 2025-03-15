@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  quality-eagles-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -27,7 +27,7 @@ jobs:
       # - name: Run with list report
       #   run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter list
       - name: Run with spec report (default)
-        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection.yaml --reporter spec
+        run: inso run collection NEW-Tadeu-QualityEagles-Collection_Insomnia -w ./NEW-Tadeu-QualityEagles-Collection_Insomnia.yaml --reporter spec
       # - name: Run with min report
       #   run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter min
       # - name: Run with progress report
