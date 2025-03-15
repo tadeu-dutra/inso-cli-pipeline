@@ -119,6 +119,6 @@ jobs:
       # - name: Run script 2
       #   run: inso run collection wrk_bd9716d353474b419167322690b72561 --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
       - name: Run insomnia test suite
-        run: inso run test My-Suite -w ./TEST-Tadeu-QualityEagles-Collection_Insomnia.yaml
+        run: inso run test My-SuiteTadeu-QualityEagles-Collection -w ./TEST-Tadeu-QualityEagles-Collection_Insomnia.yaml
         # run: inso run collection wrk_7a1bc182abe146bcb732553ae42ae761 --verbose --printOptions --ci
         # run: inso run collection wrk_babb0e6e694647979693649fc368179d --env env_6240d4965c659311762025efd96dd4e6b33e561f --workingDir /home/runner/work/inso-cli-pipeline/inso-cli-pipeline --verbose --printOptions --ci
