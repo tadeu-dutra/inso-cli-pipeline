@@ -23,7 +23,7 @@ jobs:
         run: inso --version
 
       - name: Run insomnia test suite
-        run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter dot
+        run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter list
         # run: inso run collection wrk_1c417c13210e42d1b4da6345a53e6534 -w ./Tadeu-QualityEagles-Collection.yaml --reporter progress --bail --keepFile
         # run: |
         #   inso run test \
