@@ -1403,6 +1403,7 @@ resources:
       insomnia.test('Validate corporate name is empty', () => {
       	insomnia.expect('O campo \'Nome da empresa\' da empresa é obrigatório').to.equal(insomnia.response.json().error);
       });
+
     settingStoreCookies: true
     settingSendCookies: true
     settingDisableRenderRequestBody: false
