@@ -1400,8 +1400,8 @@ resources:
       });
 
 
-      insomnia.test('Validate corporate name is empty', () => {
-      	insomnia.expect('O campo \'Nome da empresa\' da empresa é obrigatório').to.equal(insomnia.response.json().error);
+      insomnia.test('Validate error message', () => {
+      	insomnia.expect('O campo \'Nome da empresa\' da empresa é obrigatório').to.equal(insomnia.response.json().error[0]);
       });
 
     settingStoreCookies: true

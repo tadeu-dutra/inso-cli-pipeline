@@ -9,14 +9,14 @@ collection:
     meta:
       id: fld_639ad25d8685446fa75333d9c52ea7e7
       created: 1740367594888
-      modified: 1742448925683
+      modified: 1742449637266
       sortKey: -1740367593459
     children:
       - name: Login de acesso
         meta:
           id: fld_f4719e4066744304b54f487c5622a154
           created: 1740367862875
-          modified: 1742445698183
+          modified: 1742449628856
           sortKey: -1740367862876
         children:
           - url: "{{BaseUrl}}/api/login/"
@@ -262,7 +262,7 @@ collection:
         meta:
           id: fld_fbf1001b0ec1456cbd2ce4b8aa10b0cb
           created: 1740371141219
-          modified: 1742445698701
+          modified: 1742449629524
           sortKey: -1740367728167
         children:
           - url: "{{BaseUrl}}/api/user/"
@@ -611,7 +611,7 @@ collection:
         meta:
           id: fld_88e8631481144e2fa14b419113333024
           created: 1740375178073
-          modified: 1742445701180
+          modified: 1742449632885
           sortKey: -1740367660812.5
         children:
           - url: "{{BaseUrl}}/api/user/count"
@@ -871,7 +871,7 @@ collection:
         meta:
           id: fld_092a5458beaf4e0bb94f2549055cde42
           created: 1740377104765
-          modified: 1742445701645
+          modified: 1742449633540
           sortKey: -1740367627135.25
         children:
           - url: "{{BaseUrl}}/api/user/status/{{IdUser}}"
@@ -1126,7 +1126,7 @@ collection:
         meta:
           id: fld_2822b0d0cd50414fbd863cf1543aa686
           created: 1740377162642
-          modified: 1742445701841
+          modified: 1742449633828
           sortKey: -1740367610296.625
         children:
           - url: "{{BaseUrl}}/api/user/{{IdUser}}"
@@ -1232,7 +1232,7 @@ collection:
         meta:
           id: fld_93645d4077314e22b60ca1e15513414a
           created: 1740378732377
-          modified: 1742445702167
+          modified: 1742449634378
           sortKey: -1740367601877.3125
         children:
           - url: "{{BaseUrl}}/api/company"
@@ -1240,7 +1240,7 @@ collection:
             meta:
               id: req_a993e31c708a445291e757a2ccfc5b6a
               created: 1740379533181
-              modified: 1742448554707
+              modified: 1742450003659
               isPrivate: false
               sortKey: -1740379533181
             method: POST
@@ -1310,7 +1310,7 @@ collection:
                 });
 
 
-                insomnia.test('Validate corporate name is empty', () => {
+                insomnia.test('Validate error message', () => {
                 	insomnia.expect('O campo \'Nome da empresa\' da empresa é obrigatório').to.equal(insomnia.response.json().error[0]);
                 });
             settings:
@@ -1562,7 +1562,7 @@ collection:
         meta:
           id: fld_8b4c553973784f30b566754ed17528c3
           created: 1740378774436
-          modified: 1742445703322
+          modified: 1742449635859
           sortKey: -1740367597668.1562
         children:
           - url: "{{BaseUrl}}/api/company"
@@ -1602,7 +1602,7 @@ collection:
         meta:
           id: fld_f3508031fed3479383de867261473a34
           created: 1740378797733
-          modified: 1742445703632
+          modified: 1742449636301
           sortKey: -1740367595563.5781
         children:
           - url: "{{BaseUrl}}/api/company/address/{{IdCompany}}"
@@ -2133,7 +2133,7 @@ collection:
         meta:
           id: fld_89c495de5c73483095dc1bbbd396cb89
           created: 1740378825338
-          modified: 1742445703754
+          modified: 1742449636478
           sortKey: -1740367594511.289
         children:
           - url: "{{BaseUrl}}/api/company/count"
@@ -2210,7 +2210,7 @@ collection:
         meta:
           id: fld_9b34b466e8d84f898050b4b641a526bf
           created: 1740378841748
-          modified: 1742448925683
+          modified: 1742449636708
           sortKey: -1740367593985.1445
         children:
           - url: "{{BaseUrl}}/api/company/{{InvalidIdCompany}}"
@@ -2284,7 +2284,7 @@ collection:
         meta:
           id: fld_a14a526bb01d4193ae0e5b98839ecb09
           created: 1740378860131
-          modified: 1742445704047
+          modified: 1742449637041
           sortKey: -1740367593722.0723
         children:
           - url: "{{BaseUrl}}/api/company/status/{{IdCompany}}"
@@ -2381,7 +2381,7 @@ collection:
         meta:
           id: fld_2d6ee391a88a490e9b322079b19ef35a
           created: 1740378879706
-          modified: 1742445704174
+          modified: 1742449637266
           sortKey: -1740367593590.5361
         children:
           - url: "{{BaseUrl}}/api/company/{{IdCompany}}"
@@ -2465,42 +2465,42 @@ cookieJar:
   meta:
     id: jar_156a6470185741edbb5f48336fb1cb32
     created: 1740367631056
-    modified: 1742448925673
+    modified: 1742449637259
 environments:
   name: Base Environment
   meta:
     id: env_90873b233927459aacce265de89b19fb
     created: 1740367631053
-    modified: 1742448925676
+    modified: 1742449637263
     isPrivate: false
   data:
-    Cpf: "36050187102"
-    Cnpj: "92891506148532"
-    TooLongString: kZ7bDirtDSZz5d0iZKTBMvNsAig0zA8J5t7pZHuvjQFDNde3uPDD7m2eo3niLVrl69pcUPg5lF7Dkf7q8hVj3DTVanwgvViyjEhDq
-    randomZipCode: "73884746"
-    randomCity: Charlotte
-    randomState: PI
-    randomDistrict: West End
-    randomStreet: Hill Street
+    Cpf: "40474362962"
+    Cnpj: "58840067905295"
+    TooLongString: KZmF54WIqX1QDROoXGOWq0wjfR7obL1Nq8uoiWHqgWyykK1ShIzxvECr2ifFGdPyPTZCbyJX42nFTkhpw6TLkQXxcxbnA6n8VUObP
+    randomZipCode: "63901401"
+    randomCity: Los Angeles
+    randomState: AM
+    randomDistrict: Greenfield
+    randomStreet: Maple Avenue
     randomPhoneNumber: (418) 601-6183
-    randomAddressComplement: Annex
-    randomCountry: Russia
-    randomNumber: 242273555
+    randomAddressComplement: Cabin 12
+    randomCountry: United States
+    randomNumber: 27057160
     BaseUrl: https://quality-eagles.qacoders.dev.br
-    TokenAdm: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRiNWU0MGU1YTAwMTU2MzRmMTM3ZTYiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRqcGFsRGFZUlYuQlpTVndqM0xPYS8uQ2FxWC9CTVFzelFmNDdDZmp6dWJBTzVrRXA2anA2SyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDA2LzA5LzIwMjQsIDE2OjU1OjQ0IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjZkYjVlNDBlNWEwMDE1NjM0ZjEzN2U3In1dLCJfX3YiOjAsImlhdCI6MTc0MjQ0NTY0NSwiZXhwIjoxNzQyNTMyMDQ1fQ.sqXFPlUkccODBN_WgMb7-ORtcz5OyOA-LDdWYJmAyzs
+    TokenAdm: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmRiNWU0MGU1YTAwMTU2MzRmMTM3ZTYiLCJmdWxsTmFtZSI6IlFhLUNvZGVycy1TWVNBRE1JTiIsIm1haWwiOiJzeXNhZG1pbkBxYWNvZGVycy5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRqcGFsRGFZUlYuQlpTVndqM0xPYS8uQ2FxWC9CTVFzelFmNDdDZmp6dWJBTzVrRXA2anA2SyIsImFjY2Vzc1Byb2ZpbGUiOiJTWVNBRE1JTiIsImNwZiI6IjExMTExMTExMTExIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjExMTExMTExMTExMTExMTExMSIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoic2V4dGEtZmVpcmEsIDA2LzA5LzIwMjQsIDE2OjU1OjQ0IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IjAxIiwiY29tcGFueUlkIjoiUWEuQ29kZXJzIiwiX2lkIjoiNjZkYjVlNDBlNWEwMDE1NjM0ZjEzN2U3In1dLCJfX3YiOjAsImlhdCI6MTc0MjQ0OTU3NSwiZXhwIjoxNzQyNTM1OTc1fQ.9Na0OcYcod7LixoeuP2mZ3KO25QMiLo6TwCVudvgp2U
     MailAdm: sysadmin@qacoders.com
     PasswordAdm: 1234@Test
     InvalidMail: xxxxx@yyyyy
     InvalidPassword: 1234@xxx
-    TokenUser: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RiOWM0ZGZmNDQ0NjYwNWQzZjVhMjIiLCJmdWxsTmFtZSI6IlBhdHJpY2lhIFdpbHNvbiIsIm1haWwiOiJwYXRyaWNpYXdpbHNvbkBxYWNvZGVycy5jb20uYnIiLCJwYXNzd29yZCI6IiQyYiQxMCR3MWtjYVdCRzBBb3J3aGFvbTVueGkuLzNYZjViTUxucXhlUnMyeDhCcW1vYVRvUUM3RWc3cSIsImFjY2Vzc1Byb2ZpbGUiOiJBRE1JTiIsImNwZiI6IjM2MDUwMTg3MTAyIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjY2ZGI1ZTQwZTVhMDAxNTYzNGYxMzdlNiIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoicXVpbnRhLWZlaXJhLCAyMC8wMy8yMDI1LCAwMTo0MDo0NSBCUlQiLCJyZWdpc3RyYXRpb25OdW1iZXIiOiJRYUNvZGVycy02MjM5IiwiX2lkIjoiNjdkYjljNGRmZjQ0NDY2MDVkM2Y1YTIzIn1dLCJfX3YiOjAsImlhdCI6MTc0MjQ0NTY0NSwiZXhwIjoxNzQyNTMyMDQ1fQ.IZU4i6lxMiLEPETyGrlMtWHcrCdgZKTy5TOXQ6o6tps
-    FirstName: Patricia
-    LastName: Wilson
-    FullName: Patricia Wilson
-    MailUser: patriciawilson@qacoders.com.br
-    PasswordUser: 4C1dAg#%yDew
+    TokenUser: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RiYWJhOGZmNDQ0NjYwNWQ0MDRjNzYiLCJmdWxsTmFtZSI6IkRhdmlkIEhhcnJpcyIsIm1haWwiOiJkYXZpZGhhcnJpc0BxYWNvZGVycy5jb20uYnIiLCJwYXNzd29yZCI6IiQyYiQxMCRPRzBkRzQyOXg4MnliMUhQLlJxVklPTlpaWUVHWnIuQVhYN3dvU0xXeGZwN0xJWWpOQXNQaSIsImFjY2Vzc1Byb2ZpbGUiOiJBRE1JTiIsImNwZiI6IjQwNDc0MzYyOTYyIiwic3RhdHVzIjp0cnVlLCJhdWRpdCI6W3sicmVnaXN0ZXJlZEJ5Ijp7InVzZXJJZCI6IjY2ZGI1ZTQwZTVhMDAxNTYzNGYxMzdlNiIsInVzZXJMb2dpbiI6InN5c2FkbWluQHFhY29kZXJzLmNvbSJ9LCJyZWdpc3RyYXRpb25EYXRlIjoicXVpbnRhLWZlaXJhLCAyMC8wMy8yMDI1LCAwMjo0NjoxNiBCUlQiLCJyZWdpc3RyYXRpb25OdW1iZXIiOiJRYUNvZGVycy02MjM5IiwiX2lkIjoiNjdkYmFiYThmZjQ0NDY2MDVkNDA0Yzc3In1dLCJfX3YiOjAsImlhdCI6MTc0MjQ0OTU3NiwiZXhwIjoxNzQyNTM1OTc2fQ.ATTdROGTMr9Jq2Eg2oXoXHnwDWv_kRgzyXJzDycJ7dg
+    FirstName: David
+    LastName: Harris
+    FullName: David Harris
+    MailUser: davidharris@qacoders.com.br
+    PasswordUser: X%%imMiJ0k#2
     idUser: 67bbfcc011d5ff762943fe7a
-    IdUser: 67db9c4dff4446605d3f5a22
+    IdUser: 67dbaba8ff4446605d404c76
     InvalidToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JjMDEzOTExZDVmZjc2Mjk0M2ZlYzgiLCJmdWxsTmFtZSI6IkxpbmRhIEFuZGVyc29uIiwibWFpbCI6ImxpbmRhYW5kZXJzb25AcWFjb2RlcnMuY29tLmJyIiwicGFzc3dvcmQiOiIkMmIkMTAkempPWklhRzhjQ215N2FCTGY4eDVFdXdYdThHN1ZWM1RwUGhZUmtsQjRZczZmckRkRG1Wc3UiLCJhY2Nlc3NQcm9maWxlIjoiQURNSU4iLCJjcGYiOiI5MjQzNTQxMjUyOSIsInN0YXR1cyI6dHJ1ZSwiYXVkaXQiOlt7InJlZ2lzdGVyZWRCeSI6eyJ1c2VySWQiOiI2NmRiNWU0MGU1YTAwMTU2MzRmMTM3ZTYiLCJ1c2VyTG9naW4iOiJzeXNhZG1pbkBxYWNvZGVycy5jb20ifSwicmVnaXN0cmF0aW9uRGF0ZSI6InNlZ3VuZGEtZmVpcmEsIDI0LzAyLzIwMjUsIDAyOjE4OjQ5IEJSVCIsInJlZ2lzdHJhdGlvbk51bWJlciI6IlFhQ29kZXJzLTEyMjkiLCJfaWQiOiI2N2JjMDEzOTExZDVmZjc2Mjk0M2ZlYzkifV0sIl9fdiI6MCwiaWF0IjoxNzQwMzc1NzY2LCJleHAiOjE3NDA0NjIxNjZ9.liNcS79ZzWUSJsslTfU1Wojk_B0fsCpc0shIxXWoxxx
     InvalidIdUser: 67bc013911d5ff762943fabc
-    IdCompany: 67db9c51ff4446605d3f7e45
+    IdCompany: 67dbabadff4446605d407099
     InvalidIdCompany: 67bc1e4811d5ff762944229d
