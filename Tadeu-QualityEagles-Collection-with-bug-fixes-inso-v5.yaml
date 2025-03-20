@@ -3,13 +3,13 @@ name: Tadeu-QualityEagles-Collection
 meta:
   id: wrk_0a4de9a27f6c41aaa6a586ba8749360f
   created: 1742444557991
-  modified: 1742444557991
+  modified: 1742447169034
 collection:
   - name: "[Tadeu] - Quality Eagles"
     meta:
       id: fld_639ad25d8685446fa75333d9c52ea7e7
       created: 1740367594888
-      modified: 1742445704174
+      modified: 1742448925683
       sortKey: -1740367593459
     children:
       - name: Login de acesso
@@ -473,7 +473,7 @@ collection:
             meta:
               id: req_617949accce74700b9707d75a6b7f972
               created: 1740373817775
-              modified: 1742005884469
+              modified: 1742448188177
               isPrivate: false
               sortKey: -1740369849991.5
             method: POST
@@ -1240,7 +1240,7 @@ collection:
             meta:
               id: req_a993e31c708a445291e757a2ccfc5b6a
               created: 1740379533181
-              modified: 1742445348967
+              modified: 1742448554707
               isPrivate: false
               sortKey: -1740379533181
             method: POST
@@ -2210,7 +2210,7 @@ collection:
         meta:
           id: fld_9b34b466e8d84f898050b4b641a526bf
           created: 1740378841748
-          modified: 1742445703892
+          modified: 1742448925683
           sortKey: -1740367593985.1445
         children:
           - url: "{{BaseUrl}}/api/company/{{InvalidIdCompany}}"
@@ -2251,7 +2251,7 @@ collection:
             meta:
               id: req_4adff12619bb4dafbc5f67575c7ce5a0
               created: 1740411046198
-              modified: 1742445407108
+              modified: 1742448923733
               isPrivate: false
               sortKey: -1740391847394
             method: GET
@@ -2263,9 +2263,14 @@ collection:
               addTo: header
             scripts:
               preRequest: // insomnia.execution.skipRequest()
-              afterResponse: |
+              afterResponse: >-
                 insomnia.test("Status code is 200", function () {
                     insomnia.response.to.have.status(200);
+                });
+
+
+                insomnia.test('Validate user id matches', () => {
+                	insomnia.expect(insomnia.environment.get("IdCompany")).to.equal(insomnia.response.json()._id);
                 });
             settings:
               renderRequestBody: true
@@ -2460,13 +2465,13 @@ cookieJar:
   meta:
     id: jar_156a6470185741edbb5f48336fb1cb32
     created: 1740367631056
-    modified: 1742445704168
+    modified: 1742448925673
 environments:
   name: Base Environment
   meta:
     id: env_90873b233927459aacce265de89b19fb
     created: 1740367631053
-    modified: 1742445704170
+    modified: 1742448925676
     isPrivate: false
   data:
     Cpf: "36050187102"

@@ -27,5 +27,5 @@ jobs:
         # run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection.yaml --reporter spec
 
       - name: Run Tadeu-QualityEagles-Collection-with-bug-fixes
-        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bugs.yaml --reporter spec
+        run: inso run collection Tadeu-QualityEagles-Collection -w ./Tadeu-QualityEagles-Collection-with-bug-fixes-inso-v4.yaml --reporter spec
         # run: inso run collection "My Collection" -w ./My-Collection.yaml --reporter spec
