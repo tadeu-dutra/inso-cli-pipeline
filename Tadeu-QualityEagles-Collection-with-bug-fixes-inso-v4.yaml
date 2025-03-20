@@ -1700,13 +1700,10 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-
-
-
   - _id: req_0f357e69b9ef48f8a43d07ccf5c70377
     parentId: fld_571763611f8445378476d6e00a1154d3
-    modified: 1740381055115
-    created: 1740381024686
+    modified: 1740381055116
+    created: 1740381024687
     url: "{{BaseUrl}}/api/company"
     name: Lista Cadastro de Empresa com token invalido
     description: ""
@@ -1732,7 +1729,6 @@ resources:
       insomnia.test('Validate invalid token', () => {
         insomnia.expect('Failed to authenticate token.').to.equal(insomnia.response.json().errors[0]);
       });
-
     settingStoreCookies: true
     settingSendCookies: true
     settingDisableRenderRequestBody: false
@@ -1740,8 +1736,6 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-
-
   - _id: fld_571763611f8445378476d6e00a1154d3
     parentId: fld_ce24787bc62c40d5a4314e0bdcd34264
     modified: 1740378774436
